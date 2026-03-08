@@ -1,0 +1,1 @@
+/* Placeholder for images - add your profile photo, project screenshots, etc. here */
