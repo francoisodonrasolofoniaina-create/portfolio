@@ -183,11 +183,16 @@ nav {
 
 .hero-left {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 1.5rem;
 }
 
-/*  PHOTO  */
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/*  PHOTO HERO  */
 .hero-photo-wrapper {
   position: relative;
   display: flex;
@@ -206,8 +211,8 @@ nav {
 }
 
 .hero-photo {
-  width: 280px;
-  height: 280px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
@@ -216,6 +221,7 @@ nav {
   animation: fadeIn 1.2s 0.4s ease both;
   position: relative;
   z-index: 1;
+  flex-shrink: 0;
 }
 
 /* Buttons */
@@ -781,7 +787,7 @@ footer .accent { color: var(--accent); }
         </div>
       </div>
       <div class="hero-photo-wrapper">
-        <img src="/photo.png" alt="Rasolofoniaina François Odon" class="hero-photo" />
+        <img src="odon.png" alt="Rasolofoniaina François Odon" class="hero-photo" />
       </div>
     </div>
   </section>
