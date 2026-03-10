@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio — Développeur Full-Stack Python · Java · JavaScript" />
-  <meta property="og:title" content="Portfolio · Dev Full-Stack" />
-  <meta property="og:description" content="Développeur passionné par le code et les solutions élégantes." />
-  <title>Portfolio · Dev Full-Stack</title>
+  <meta property="og:title" content="Portfolio · Etudiant" />
+  <meta property="og:description" content="Développeur web et mobile, passionné par l'Intelligence Artificielle et la Robotique." />
+  <title>Portfolio · Etudiant</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,12 +15,8 @@
 
   <!-- Feuille de style interne -->
   <style>
-/* ═══════════════════════════════════════════════════════════════
-   PORTFOLIO — style.css
-   Lié à : index.html
-   ═══════════════════════════════════════════════════════════════ */
 
-/* ─── VARIABLES ─────────────────────────────────────────────── */
+/*  VARIABLES */
 :root {
   --bg:        #080c10;
   --bg2:       #0e1319;
@@ -36,7 +32,7 @@
   --tr:        0.3s cubic-bezier(.4, 0, .2, 1);
 }
 
-/* ─── RESET ─────────────────────────────────────────────────── */
+/*  RESET  */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -60,7 +56,7 @@ body {
 a  { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 
-/* ─── GRAIN OVERLAY ─────────────────────────────────────────── */
+/*  GRAIN OVERLAY  */
 body::before {
   content: '';
   position: fixed;
@@ -71,14 +67,14 @@ body::before {
   z-index: 9999;
 }
 
-/* ─── SCROLLBAR ─────────────────────────────────────────────── */
+/*  SCROLLBAR  */
 ::-webkit-scrollbar       { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    NAV
-───────────────────────────────────────────────────────────── */
+ */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -126,9 +122,9 @@ nav {
 .nav-links a:hover            { color: var(--accent); }
 .nav-links a:hover::after     { width: 100%; }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    HERO
-───────────────────────────────────────────────────────────── */
+ */
 #hero {
   min-height: 100vh;
   display: grid;
@@ -185,6 +181,43 @@ nav {
   animation: fadeUp 0.8s 0.3s ease both;
 }
 
+.hero-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*  PHOTO  */
+.hero-photo-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-photo-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,229,255,0.15) 0%, transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-photo {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 40px rgba(0,229,255,0.2);
+  animation: fadeIn 1.2s 0.4s ease both;
+  position: relative;
+  z-index: 1;
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
@@ -224,7 +257,8 @@ nav {
 .hero-right {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
+  gap: 2rem;
   animation: fadeIn 1.2s 0.4s ease both;
 }
 
@@ -265,9 +299,9 @@ nav {
 .stack-dot.orange { background: var(--accent2); }
 .stack-dot.teal   { background: #00ff9d; }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    SECTIONS — COMMON
-───────────────────────────────────────────────────────────── */
+ */
 section { padding: 6rem 4rem; }
 
 .section-label {
@@ -295,9 +329,9 @@ section { padding: 6rem 4rem; }
   opacity: 0.3;
 }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    ABOUT
-───────────────────────────────────────────────────────────── */
+ */
 #about { background: var(--bg2); }
 
 .about-grid {
@@ -343,9 +377,9 @@ section { padding: 6rem 4rem; }
 .tag:hover         { border-color: var(--accent); color: var(--accent); }
 .tag.accent        { border-color: rgba(0, 229, 255, 0.4); color: var(--accent); background: rgba(0, 229, 255, 0.05); }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    EXPERIENCE — TIMELINE
-───────────────────────────────────────────────────────────── */
+ */
 #experience { background: var(--bg); }
 
 .timeline {
@@ -455,9 +489,9 @@ section { padding: 6rem 4rem; }
   border: 1px solid rgba(0, 229, 255, 0.15);
 }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    EDUCATION
-───────────────────────────────────────────────────────────── */
+ */
 #education { background: var(--bg2); }
 
 .edu-grid {
@@ -516,9 +550,9 @@ section { padding: 6rem 4rem; }
   line-height: 1.6;
 }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    LANGUAGES
-───────────────────────────────────────────────────────────── */
+ */
 #languages { background: var(--bg); }
 
 .lang-grid {
@@ -577,9 +611,9 @@ section { padding: 6rem 4rem; }
   margin-top: 0.75rem;
 }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    PROJECTS
-───────────────────────────────────────────────────────────── */
+ */
 #projects { background: var(--bg2); }
 
 .projects-grid {
@@ -645,9 +679,9 @@ section { padding: 6rem 4rem; }
 
 .project-link:hover { border-color: var(--accent); }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    CONTACT
-───────────────────────────────────────────────────────────── */
+ */
 #contact {
   background: var(--bg);
   text-align: center;
@@ -669,9 +703,9 @@ section { padding: 6rem 4rem; }
   flex-wrap: wrap;
 }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    FOOTER
-───────────────────────────────────────────────────────────── */
+ */
 footer {
   background: var(--bg2);
   border-top: 1px solid var(--border);
@@ -686,9 +720,9 @@ footer {
 
 footer .accent { color: var(--accent); }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    ANIMATIONS
-───────────────────────────────────────────────────────────── */
+ */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -703,9 +737,9 @@ footer .accent { color: var(--accent); }
   from { width: 0 !important; }
 }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    RESPONSIVE — MOBILE
-───────────────────────────────────────────────────────────── */
+ */
 @media (max-width: 768px) {
   nav              { padding: 1rem 1.5rem; }
   .nav-links       { gap: 1rem; }
@@ -735,21 +769,19 @@ footer .accent { color: var(--accent); }
   <!-- HERO -->
   <section id="hero">
     <div class="hero-left">
-      <h1 class="hero-title">Rasolofoniaina<br /><span>François Odon</span></h1>
-      <p class="hero-sub">
-        Je suis un étudiant, première année de Licence en Informatique, EMIT Univresité de Fianarantsoa.
-        Passionné par le développement web et mobile, Intelligence Artificielle et Robotique.
-      </p>
-      <div class="hero-ctas">
-        <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-        <a href="#contact" class="btn btn-outline">Me contacter</a>
+      <div class="hero-text">
+        <h1 class="hero-title">Rasolofoniaina<br /><span>François Odon</span></h1>
+        <p class="hero-sub">
+          Je suis un étudiant, première année de Licence en Informatique, EMIT Univresité de Fianarantsoa.
+          Passionné par le développement web et mobile, Intelligence Artificielle et Robotique.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+          <a href="#contact" class="btn btn-outline">Me contacter</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-card">
-        <div class="stack-item"><div class="stack-dot teal"></div> JavaScript · Node.js</div>
-        <div class="stack-item"><div class="stack-dot"></div> SQL · PostgreSQL</div>
-        <div class="stack-item"><div class="stack-dot orange"></div> Git · Vercel</div>
+      <div class="hero-photo-wrapper">
+        <img src="photo.png" alt="Rasolofoniaina François Odon" class="hero-photo" />
       </div>
     </div>
   </section>
@@ -895,8 +927,8 @@ footer .accent { color: var(--accent); }
 
   <!-- CONTACT -->
   <section id="contact">
-    <h2 class="section-title">Travaillons ensemble</h2>
-    <p class="contact-sub">Disponible pour des missions freelance, des postes full-time ou des collaborations open-source.</p>
+    <h2 class="section-title">Pour une avenir meilleur</h2>
+    <p class="contact-sub">Etudier pour obtenir un meilleur travail, meilleur avenir avec le développement de la nouvelle technologie</p>
     <div class="contact-links">
       <a href="mailto:votre@email.com" class="btn btn-primary">francoisodonrasolofoniaina@gmail.com</a>
       <a href="https://github.com/francoisodonrasolofoniaina-create" target="_blank" class="btn btn-outline">GitHub</a>

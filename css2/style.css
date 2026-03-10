@@ -1,9 +1,6 @@
-/* ═══════════════════════════════════════════════════════════════
-   PORTFOLIO — style.css
-   Lié à : index.html
-   ═══════════════════════════════════════════════════════════════ */
 
-/* ─── VARIABLES ─────────────────────────────────────────────── */
+
+/*  VARIABLES  */
 :root {
   --bg:        #080c10;
   --bg2:       #0e1319;
@@ -19,7 +16,7 @@
   --tr:        0.3s cubic-bezier(.4, 0, .2, 1);
 }
 
-/* ─── RESET ─────────────────────────────────────────────────── */
+/*  RESET  */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -43,7 +40,7 @@ body {
 a  { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 
-/* ─── GRAIN OVERLAY ─────────────────────────────────────────── */
+/*  GRAIN OVERLAY  */
 body::before {
   content: '';
   position: fixed;
@@ -54,14 +51,14 @@ body::before {
   z-index: 9999;
 }
 
-/* ─── SCROLLBAR ─────────────────────────────────────────────── */
+/*  SCROLLBAR  */
 ::-webkit-scrollbar       { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    NAV
-───────────────────────────────────────────────────────────── */
+ */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -109,9 +106,9 @@ nav {
 .nav-links a:hover            { color: var(--accent); }
 .nav-links a:hover::after     { width: 100%; }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    HERO
-───────────────────────────────────────────────────────────── */
+ */
 #hero {
   min-height: 100vh;
   display: grid;
@@ -248,9 +245,9 @@ nav {
 .stack-dot.orange { background: var(--accent2); }
 .stack-dot.teal   { background: #00ff9d; }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    SECTIONS — COMMON
-───────────────────────────────────────────────────────────── */
+ */
 section { padding: 6rem 4rem; }
 
 .section-label {
@@ -278,9 +275,9 @@ section { padding: 6rem 4rem; }
   opacity: 0.3;
 }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    ABOUT
-───────────────────────────────────────────────────────────── */
+ */
 #about { background: var(--bg2); }
 
 .about-grid {
@@ -326,9 +323,9 @@ section { padding: 6rem 4rem; }
 .tag:hover         { border-color: var(--accent); color: var(--accent); }
 .tag.accent        { border-color: rgba(0, 229, 255, 0.4); color: var(--accent); background: rgba(0, 229, 255, 0.05); }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    EXPERIENCE — TIMELINE
-───────────────────────────────────────────────────────────── */
+ */
 #experience { background: var(--bg); }
 
 .timeline {
@@ -438,9 +435,9 @@ section { padding: 6rem 4rem; }
   border: 1px solid rgba(0, 229, 255, 0.15);
 }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    EDUCATION
-───────────────────────────────────────────────────────────── */
+ */
 #education { background: var(--bg2); }
 
 .edu-grid {
@@ -499,9 +496,9 @@ section { padding: 6rem 4rem; }
   line-height: 1.6;
 }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    LANGUAGES
-───────────────────────────────────────────────────────────── */
+ */
 #languages { background: var(--bg); }
 
 .lang-grid {
@@ -560,9 +557,9 @@ section { padding: 6rem 4rem; }
   margin-top: 0.75rem;
 }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    PROJECTS
-───────────────────────────────────────────────────────────── */
+ */
 #projects { background: var(--bg2); }
 
 .projects-grid {
@@ -628,9 +625,9 @@ section { padding: 6rem 4rem; }
 
 .project-link:hover { border-color: var(--accent); }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    CONTACT
-───────────────────────────────────────────────────────────── */
+ */
 #contact {
   background: var(--bg);
   text-align: center;
@@ -652,9 +649,9 @@ section { padding: 6rem 4rem; }
   flex-wrap: wrap;
 }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    FOOTER
-───────────────────────────────────────────────────────────── */
+ */
 footer {
   background: var(--bg2);
   border-top: 1px solid var(--border);
@@ -669,9 +666,9 @@ footer {
 
 footer .accent { color: var(--accent); }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    ANIMATIONS
-───────────────────────────────────────────────────────────── */
+ */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -686,9 +683,9 @@ footer .accent { color: var(--accent); }
   from { width: 0 !important; }
 }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    RESPONSIVE — MOBILE
-───────────────────────────────────────────────────────────── */
+ */
 @media (max-width: 768px) {
   nav              { padding: 1rem 1.5rem; }
   .nav-links       { gap: 1rem; }
