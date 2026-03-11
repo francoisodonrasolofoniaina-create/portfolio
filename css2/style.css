@@ -684,15 +684,154 @@ footer .accent { color: var(--accent); }
 }
 
 /* 
-   RESPONSIVE — MOBILE
+   RESPONSIVE — MOBILE SMALL (320px - 480px)
  */
-@media (max-width: 768px) {
-  nav              { padding: 1rem 1.5rem; }
-  .nav-links       { gap: 1rem; }
-  .nav-links a     { font-size: 0.65rem; }
-  section          { padding: 4rem 1.5rem; }
-  #hero            { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; }
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+  
+  nav              { padding: 0.75rem 1rem; }
+  .nav-logo        { font-size: 0.9rem; }
+  .nav-links       { gap: 0.75rem; }
+  .nav-links a     { font-size: 0.6rem; }
+  
+  section, .section-title { margin: 0; }
+  section          { padding: 3rem 1rem; }
+  
+  #hero {
+    grid-template-columns: 1fr;
+    padding: 5.5rem 1rem 2rem;
+    min-height: auto;
+  }
+  #hero::before    { display: none; }
+  
+  .hero-label      { font-size: 0.6rem; margin-bottom: 1rem; }
+  .hero-title      { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+  .hero-sub        { font-size: 0.85rem; max-width: none; margin-bottom: 1.5rem; }
+  
+  .hero-ctas {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.65rem 1rem;
+    font-size: 0.75rem;
+  }
+  
   .hero-right      { display: none; }
+  
+  .about-grid      { grid-template-columns: 1fr; gap: 1.5rem; }
+  .section-title   { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 2rem; }
+  
+  .edu-grid        { grid-template-columns: 1fr; }
+  .lang-grid       { grid-template-columns: 1fr; }
+  .projects-grid   { grid-template-columns: 1fr; }
+  
+  .timeline        { padding-left: 1.5rem; }
+  .timeline-item::before { left: -1.9rem; }
+  
+  .timeline-meta {
+    flex-direction: column;
+  }
+  
+  .contact-links {
+    flex-direction: column;
+  }
+  .contact-links a { width: 100%; }
+  
+  footer {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.65rem;
+  }
+}
+
+/* 
+   RESPONSIVE — MOBILE MEDIUM (480px - 768px)
+ */
+@media (min-width: 481px) and (max-width: 768px) {
+  html { font-size: 15px; }
+  
+  nav              { padding: 1rem 1.5rem; }
+  .nav-links       { gap: 1.5rem; }
+  .nav-links a     { font-size: 0.68rem; }
+  
+  section          { padding: 4rem 1.5rem; }
+  
+  #hero {
+    grid-template-columns: 1fr;
+    padding: 6.5rem 1.5rem 3rem;
+  }
+  #hero::before    { width: 400px; height: 400px; top: 20%; right: -150px; }
+  
+  .hero-title      { font-size: clamp(2.5rem, 5vw, 4rem); }
+  .hero-sub        { max-width: none; }
+  
+  .hero-ctas {
+    flex-wrap: wrap;
+  }
+  
+  .hero-right      { display: none; }
+  
   .about-grid      { grid-template-columns: 1fr; gap: 2rem; }
-  footer           { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+  .section-title   { font-size: clamp(1.8rem, 3.5vw, 2.5rem); }
+  
+  .edu-grid        { grid-template-columns: repeat(2, 1fr); }
+  .lang-grid       { grid-template-columns: repeat(2, 1fr); }
+  .projects-grid   { grid-template-columns: 1fr; }
+  
+  footer {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+    padding: 1.5rem;
+  }
+}
+
+/* 
+   RESPONSIVE — TABLET (768px - 1024px)
+ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav              { padding: 1rem 2.5rem; }
+  .nav-links       { gap: 2rem; }
+  
+  section          { padding: 5rem 2.5rem; }
+  
+  #hero {
+    grid-template-columns: 1fr 1fr;
+    padding: 7rem 2.5rem 4rem;
+  }
+  #hero::before    { width: 500px; height: 500px; }
+  
+  .hero-right      { 
+    display: flex;
+    justify-content: center;
+  }
+  .hero-card       { width: 240px; }
+  
+  .about-grid      { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .section-title   { font-size: clamp(2rem, 3.5vw, 2.8rem); }
+  
+  .edu-grid        { grid-template-columns: repeat(2, 1fr); }
+  .lang-grid       { grid-template-columns: repeat(2, 1fr); }
+  .projects-grid   { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* 
+   RESPONSIVE — DESKTOP (1024px+)
+ */
+@media (min-width: 1025px) {
+  nav              { padding: 1.25rem 4rem; }
+  #hero            { padding: 8rem 4rem 4rem; }
+  #hero::before    { width: 600px; height: 600px; }
+  
+  section          { padding: 6rem 4rem; }
+  
+  .hero-card       { width: 280px; }
+  .edu-grid        { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .lang-grid       { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .projects-grid   { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 }
